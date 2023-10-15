@@ -23,7 +23,10 @@ Follow these steps to set up and run the Markdown to PDF Converter locally:
 3. npm install
 
 ### Configuration
-Before running the application, make sure that you have Pandoc installed on your system. You can download it from the Pandoc website.
+Before running the application, make sure that you have Pandoc and LATEX installed on your system. You can download it from the Pandoc website.
+
+### Pandoc command to convert markdown to PDF
+pandoc "markdownFileName".md --pdf-engine=xelatex -o "pdfName".pdf
 
 ### Running the Application
 To start the application, use the following command:
