@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/abhishekjani08/Markdown-to-pdf/issues"
   },
-  "homepage": "https://github.com/abhishekjani08/Markdown-to-pdf#readme"
+  "homepage": "https://github.com/abhishekjani08/Markdown-to-pdf#readme",
+  "dependencies": {
+    "markdown-pdf": "^11.0.0"
+  }
 }
