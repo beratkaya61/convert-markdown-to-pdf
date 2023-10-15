@@ -1,0 +1,20 @@
+{
+  "name": "markdown-to-pdf",
+  "version": "1.0.0",
+  "description": "## Project Description:",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishekjani08/Markdown-to-pdf.git"
+  },
+  "author": "Abhishek Jani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishekjani08/Markdown-to-pdf/issues"
+  },
+  "homepage": "https://github.com/abhishekjani08/Markdown-to-pdf#readme"
+}
