@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Markdown to PDF Converter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <h1>Markdown to PDF Converter</h1>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="markdown-editor">
+            <textarea id="markdown-input" placeholder="Enter your Markdown here..."></textarea>
+        </div>
+        <input type="file" id="file-upload" accept=".md">
+        <button id="upload-button">Upload Markdown File</button>
+
+        <!-- Add the "Convert to PDF" button here -->
+        <button id="convert-button">Convert to PDF</button>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('convert-button').addEventListener('click', function () {
+            const markdownContent = document.getElementById('markdown-input').value;
+
+            fetch('/convert', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ markdownContent }),
+            })
+                .then(response => response.blob())
+                .then(data => {
+                    const blob = new Blob([data], { type: 'application/pdf' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Markdown-to-PDF.pdf';
+                    a.style.display = 'none';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
