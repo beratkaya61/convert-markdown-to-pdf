@@ -20,17 +20,20 @@ Follow these steps to set up and run the Markdown to PDF Converter locally:
    git clone https://github.com/your-username/markdown-to-pdf.git
 ```
 
-2. cd markdown-to-pdf
+2. cd convert-markdown-to-pdf
 
 3. npm install
 
 ### Configuration
+
 Before running the application, make sure that you have Pandoc and LATEX installed on your system. You can download it from the Pandoc website.
 
 ### Pandoc command to convert markdown to PDF
+
 pandoc "markdownFileName".md --pdf-engine=xelatex -o "pdfName".pdf
 
 ### Running the Application
+
 To start the application, use the following command:
 
 ```
@@ -48,4 +51,5 @@ npm start
 - The PDF file will be available for download.
 
 ### License
+
 This project is licensed under the MIT License. See the LICENSE file for details.

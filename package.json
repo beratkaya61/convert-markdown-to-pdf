@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/abhishekjani08/Markdown-to-pdf#readme",
   "dependencies": {
+    "express": "^4.21.2",
     "markdown-pdf": "^11.0.0"
   }
 }
